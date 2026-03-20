@@ -19,6 +19,6 @@ model StudentTable {
   id    Int    @id @default(autoincrement())
   name  String
   email String
-
+  class String
   @@map("students")
 }

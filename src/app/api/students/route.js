@@ -30,7 +30,7 @@ export async function GET(res) {
 
   return NextResponse.json({
     status : 200,
-    message: `search by studentName ${name} successfully`,
+    message: `search by student name : ${name} successfully`,
     payload : data
   })
 }

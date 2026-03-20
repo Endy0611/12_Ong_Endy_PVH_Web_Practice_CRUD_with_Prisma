@@ -10,7 +10,7 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
-import { Button, Card } from "@heroui/react";
+import { Card } from "@heroui/react";
 
 export default function DetailComponent({ student }) {
   return (

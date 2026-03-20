@@ -17,6 +17,39 @@ export async function GET(_, { params }) {
   });
 }
 
-// export async function PUT(_, {params}) {
-//     const {studentId} 
-// }
+export async function PUT(request, { params }) {
+  const { studentId } = await params;
+  const content = await request.json();
+
+  const data = await prisma.studentTable.update({
+    where: {
+      id: +studentId,
+    },
+    data: {
+      name: content.name,
+      email: content.email,
+      class: content.class,
+    },
+  });
+
+  return NextResponse.json({
+    status: 200,
+    message: `update student by ${studentId} successfully`,
+    payload: data,
+  });
+}
+
+export async function DELETE(_, {params}) {
+  const {studentId} = await params;
+  const data = await prisma.studentTable.delete({
+    where : {
+      id: +studentId
+    }
+  })
+
+  return NextResponse.json({
+    status : 200,
+    message : `delete student by ${studentId} successfully`,
+    payload : data
+  })
+}

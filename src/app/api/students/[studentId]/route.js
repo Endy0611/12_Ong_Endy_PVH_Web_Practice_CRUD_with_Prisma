@@ -16,3 +16,7 @@ export async function GET(_, { params }) {
     payload: student,
   });
 }
+
+// export async function PUT(_, {params}) {
+//     const {studentId} 
+// }

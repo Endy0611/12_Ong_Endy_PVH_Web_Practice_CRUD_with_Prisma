@@ -17,6 +17,8 @@ export async function GET(_, { params }) {
   });
 }
 
+
+
 export async function PUT(request, { params }) {
   const { studentId } = await params;
   const content = await request.json();

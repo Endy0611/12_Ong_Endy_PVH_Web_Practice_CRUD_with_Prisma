@@ -12,3 +12,22 @@ export async function GET() {
         payload : res
     })
 }
+
+export async function POST(request) {
+    const body = await request.json();
+    const addData = await prisma.studentTable.create({
+
+        data : {
+            name : body.name,
+            email : body.email,
+            class : body.class
+        }
+    })
+
+    return NextResponse.json({
+        status : 201,
+        message: `create student successfully`,
+        payload: addData
+    })
+
+}

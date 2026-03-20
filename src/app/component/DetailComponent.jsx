@@ -24,7 +24,7 @@ export default function DetailComponent({ student }) {
               </div>
             </div>
             <div className="mb-4">
-              <h1 className="text-3xl font-bold text-white tracking-tight">
+              <h1 className="text-3xl font-bold text-blue-500 tracking-tight">
                 {student.name}
               </h1>
               <div className="flex gap-2 mt-2">
